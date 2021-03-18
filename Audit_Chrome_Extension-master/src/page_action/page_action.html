@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Custom styles for this template -->
+
+    <script type="text/javascript" src="popup.js"></script>
+  </head>
+
+  <body class="bg-light" style="font-family: Verdana, Geneva, sans-serif, fantasy; font-weight: 500;min-width: 400px;">
+     
+
+    <main id="main" role="main" class="container" style=" background-image: radial-gradient(rgb(158, 158, 158), rgb(26, 80, 80),rgb(158,158,158));">
+      <table><tr><th><strong class="d-block text-gray-dark" style="line-height: 30px;"><img src="D:\Minal\Audit_Chrome_Extension-master\logo.jpg" style="height: 50px; width: 50px; position: relative; top:5px;"/></th>
+            <th><h3 style="text-align: center; color: rgb(243, 243, 243); font-family: 'Franklin Gothic Medium'; position: relative; left: 20px; top: 5px;" class="mb-0 text-gray-dark lh-100">Clevertap Web Tester</h3></th>
+      </strong></th></tr></table>
+      <div class="d-flex align-items-center p-3 my-3 text-white-50 rounded box-shadow" style="background-color: rgb(203, 211, 211);">
+      <p class="media-body pb-8 mb-0 small lh-125"><strong class="d-block text-gray-dark" style="line-height: 30px; ">Turn ON Debugger : </strong></p>    
+      <button type="button" class="btn btn-success" style="line-height: 20px; position: relative;" id="run_me"></button>
+       <!-- <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"></p>     -->
+      </div>
+
+      <div class="my-3 p-3 rounded box-shadow" style="background-color: rgb(203, 211, 211);"><p class="media-body pb-2 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark" style="line-height: 30px;">Clevertap is found!</strong>
+            <strong class="d-block text-gray-dark"  style="line-height: 30px;">Account ID :<span id="acc"> none</span></strong>
+            
+      </p>
+      </div>
+
+      <div class="my-3 p-3 rounded box-shadow" style="background-color: rgb(203, 211, 211);">
+            <table><tr>
+                  <th><p class="media-body pb-8 mb-0 small lh-125"><strong class="d-block text-gray-dark" style="line-height: 30px;"> Move to Account:</strong></p></th>
+                  <th><button type="button" class="btn btn-success" style="line-height: 20px; background:#505050; position: relative; left: 10px;" id="gta">Account</button></th></tr></table>
+            <table><tr>
+                  <th><p class="media-body pb-8 mb-0 small lh-125"><strong class="d-block text-gray-dark" style="line-height: 30px;">Select Account  :</strong></p></th>      
+                  <th>  <select id="drop1" name="drop1" style="color:rgb(243,243,243); background-color: #505050; border: 1px solid rgb(41, 189, 61);border-radius: 5px; position: relative; left: 20px;">
+                                   <option value="nothing">--choose account--</option>
+                                   <option value="https://in1.dashboard.clevertap.com/">in1</option>
+                                   <option value="https://eu1.dashboard.clevertap.com/">eu1</option>
+                                   <option value="https://sg1.dashboard.clevertap.com/">sg1</option>
+                                   <option value="https://us1.dashboard.clevertap.com/">us1</option>
+                        </select></th>
+                  </tr>
+            </table>
+                        <p class="media-body pb-1 mb-0 small lh-125 border-bottom border-gray"></p>
+      </div>
+
+            <div class="my-3 p-3 rounded box-shadow" style="background-color: rgb(203, 211, 211);"><p class="media-body pb-2 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark" style="line-height: 30px;"><span id="serviceworker"> Service Worker is not present.</span></strong></p>
+            </div>
+        
+            <div class="my-3 p-3 rounded box-shadow" style="background-color: rgb(203, 211, 211);"><p class="media-body pb-3 mb-0 small lh-125">
+            <strong class="d-block text-gray-dark" style="line-height: 30px;">CTID :<span id="ctid"> none</span></strong></p>
+      
+            <button type="button" id="login" class="btn btn-success" style="line-height: 20px; background:#505050;">Login User 1</button>
+            <button type="button" id="loginagain" class="btn btn-success" style="line-height: 20px; background:#505050;">Login User 2</button>
+            <button type="button" id="test" class="btn btn-success" style="line-height: 20px; background:#505050;">Test</button>
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"><strong class="d-block text-gray-dark" style="line-height: 20px;"><span id="userlogin"></span></strong></p>
+            <!-- <p class="media-body pb-3 mb-0 small lh-125"><strong class="d-block text-gray-dark" style="line-height: 30px;"><span id="userlogin"></span></strong></p> -->
+            </div>
+            
+            <p class="media-body pb-1 mb-0 small lh-125"></p>  
+        
+      </main>      
+     
+      <!-- <div class="my-3 p-3 bg-white rounded box-shadow"><p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark" style="line-height: 30px;"><div class="progress" style=""><div class="progress-bar w-25"></div></div>Clevertap is found?</strong><strong class="d-block text-gray-dark" style="line-height: 30px;">Account ID is :&nbsp;</strong><div class="container" style=""></div><button type="button" class="btn btn-success" style="line-height: 30px;">Primary</button></p>
+        
+        
+        
+        
+        
+      </div><div class="my-3 p-3 bg-white rounded box-shadow"><p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark" style="line-height: 30px;"><div class="progress" style=""><div class="progress-bar w-25"></div></div>Clevertap is found?</strong><strong class="d-block text-gray-dark" style="line-height: 30px;">Account ID is :&nbsp;</strong><div class="container" style=""></div><button type="button" class="btn btn-success" style="line-height: 30px;">Primary</button></p>
+        
+        
+        
+        
+        
+      </div><div class="my-3 p-3 bg-white rounded box-shadow"><p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark" style="line-height: 30px;"><div class="progress" style=""><div class="progress-bar w-25"></div></div>Clevertap is found?</strong><strong class="d-block text-gray-dark" style="line-height: 30px;">Account ID is :&nbsp;</strong><div class="container" style=""></div><button type="button" class="btn btn-success" style="line-height: 30px;">Primary</button></p>
+        
+        
+        
+        
+        
+      </div><div class="my-3 p-3 bg-white rounded box-shadow"><p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark" style="line-height: 30px;"><div class="progress" style=""><div class="progress-bar w-25"></div></div>Clevertap is found?</strong><strong class="d-block text-gray-dark" style="line-height: 30px;">Account ID is :&nbsp;</strong><div class="container" style=""></div><button type="button" class="btn btn-success" style="line-height: 20px;">Primary</button></p>
+        
+        
+        
+        
+        
+      </div>
+ -->
+
+   
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="../../js/vendor/popper.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/holderjs@2.9.4/holder.js"></script>
+    <script src="offcanvas.js"></script>
+	
+	
+  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="2" style="font-weight:bold;font-size:2pt;font-family:Arial, Helvetica, Open Sans, sans-serif">32x32</text></svg></body>
+
+</html>
