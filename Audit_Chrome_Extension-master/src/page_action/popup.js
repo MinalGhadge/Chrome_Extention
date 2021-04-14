@@ -13,12 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginagain=document.getElementById('loginagain');
     const test=document.getElementById('test');
     const refresh=document.getElementById('refresh');
-    // const swbutton=document.getElementById('swbutton');
     window.addEventListener('DOMContentLoaded', function () {
     	
  chrome.storage.local.get("datanew", function(data) {
 	console.log(JSON.stringify(data.datanew.account.id));
-    // console.log(JSON.stringify(data.datanew.clevertapid));
     if(typeof data == "undefined") {
         console.log("error");
     } else {
@@ -31,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
      login.addEventListener("click",function(){firstlogin(msg.innerHTML="Logout and Login again with different email",ctid.innerHTML="CTID:"+data.datanew.clevertapid)});
      loginagain.addEventListener("click",function(){again(ctid.innerHTML="CTID:"+data.datanew.clevertapid)});
      test.addEventListener("click",check);
-    //  swbutton.addEventListener("click",load);
      refresh.addEventListener("click",refreshpage);
     // });
       //searches for and detects the input element from the 'myButton' id
@@ -117,12 +114,3 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
             
         });
 }
-
-// function load(){
-//     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-//         chrome.tabs.sendMessage(tabs[0].id, { method: "load" }, function (response) { 
-//             // alert("Add CT service worker file to root folder.")
-//         });
-        
-//     });
-// }

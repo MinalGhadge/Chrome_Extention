@@ -71,8 +71,9 @@ document.addEventListener('secondLogin' ,function (e)
     CTID.push(clevertap.getCleverTapID());
     localStorage.setItem('CTID',JSON.stringify(CTID));
 });
-//for Testing onOserLogin implementation
 
+
+//for Testing onOserLogin implementation
 
 document.addEventListener('test', function(e)
 {  
@@ -87,30 +88,4 @@ document.addEventListener('test', function(e)
      
     });
    
-// document.addEventListener('load', function(e)
-//   {  
-//     if ('serviceWorker' in navigator) {
-//       console.log('Service Worker is supported');
-//       navigator.serviceWorker.register('clevertap_sw.js')
-//       .then(function(swReg) {
-//         console.log('Service Worker is registered');
-//         // navigator.serviceWorker.ready.then((a) => {
-//         //   console.log("Response, ", a);
-//         })
-//       .catch(function(error) {
-//         console.error('Service Worker Error', error);
-//       });
-//       // });
-//     }
-//     else {
-//         console.warn('Push messaging is not supported');
-//         }
-//         // var data = {
-//         //   account: clevertap.account["0"],
-//         //   clevertapid: clevertap.getCleverTapID(),
-//         //   worker: "service worker is registered",
-        
-//         // };
-//         // document.dispatchEvent(new CustomEvent('yourCustomEvent', { detail: data }));
-//   }); 
     
