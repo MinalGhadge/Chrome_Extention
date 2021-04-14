@@ -14,7 +14,7 @@
   },
   "options_page": "src/options_custom/index.html",
   "page_action": {
-    "default_icon": "icons/icon19.png",
+    "default_icon": "icons/ct19.png",
     "default_title": "page action demo",
     "default_popup": "src/page_action/page_action.html"
   },
@@ -34,6 +34,6 @@
       ]
     }
   ],
-    "web_accessible_resources": ["script.js","alert.js"]
+    "web_accessible_resources": ["script.js"]
 }
 

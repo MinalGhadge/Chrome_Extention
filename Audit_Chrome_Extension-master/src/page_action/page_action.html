@@ -11,94 +11,65 @@
     <script type="text/javascript" src="popup.js"></script>
   </head>
 
-  <body class="bg-light" style="font-family: Verdana, Geneva, sans-serif, fantasy; font-weight: 500;min-width: 400px;">
+  <body class="bg-light" style="font-family: Verdana, Geneva, sans-serif, fantasy; font-weight: 500;min-width: 420px;">
      
 
     <main id="main" role="main" class="container" style=" background-image: radial-gradient(rgb(158, 158, 158), rgb(26, 80, 80),rgb(158,158,158));">
-      <table><tr><th><strong class="d-block text-gray-dark" style="line-height: 30px;"><img src="D:\Minal\Audit_Chrome_Extension-master\logo.jpg" style="height: 50px; width: 50px; position: relative; top:5px;"/></th>
-            <th><h3 style="text-align: center; color: rgb(243, 243, 243); font-family: 'Franklin Gothic Medium'; position: relative; left: 20px; top: 5px;" class="mb-0 text-gray-dark lh-100">Clevertap Web Tester</h3></th>
-      </strong></th></tr></table>
-      <div class="d-flex align-items-center p-3 my-3 text-white-50 rounded box-shadow" style="background-color: rgb(203, 211, 211);">
-      <p class="media-body pb-8 mb-0 small lh-125"><strong class="d-block text-gray-dark" style="line-height: 30px; ">Turn ON Debugger : </strong></p>    
-      <button type="button" class="btn btn-success" style="line-height: 20px; position: relative;" id="run_me"></button>
-       <!-- <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"></p>     -->
+      <table><tr><th><strong class="d-block text-gray-dark" style="line-height: 30px;"><img src="\icons\logo.jpg" style="height: 50px; width: 50px; position: relative; top:5px;"/></th>
+            <th><h3 style="text-align: center; color: rgb(243, 243, 243); font-family: 'Franklin Gothic Medium'; position: relative; left: 20px; top: 5px;" class="mb-0 text-gray-dark lh-100">Clevertap Web Tester</h3></strong></th>
+            <th><img title="Refresh the tab" id="refresh" src="\icons\refresh6.png" style="height: 35px; width: 35px; position: relative; top:5px; left:45px;"/>
+            <lable class="d-block small text-gray-dark" style="position: relative; left: 35px; top: 5px;">Refresh</lable></th></tr></table>
+
+      <div class="lh-100 align-items-center p-3 my-3 text-white-50 rounded box-shadow" style="background-color: rgb(203, 211, 211)">
+      <table><tr><th><p class="media-body pb-8 mb-0 small lh-125"><strong class="d-block text-gray-dark" style="line-height: 30px;">Turn ON Debugger : </strong></p></th> 
+            <th><button type="button" class="btn btn-success" style="line-height: 20px; position: relative; left: 20px;" id="run_me">Debugger off</button></th></tr></table>
       </div>
 
       <div class="my-3 p-3 rounded box-shadow" style="background-color: rgb(203, 211, 211);"><p class="media-body pb-2 mb-0 small lh-125 border-bottom border-gray">
             <strong class="d-block text-gray-dark" style="line-height: 30px;">Clevertap is found!</strong>
-            <strong class="d-block text-gray-dark"  style="line-height: 30px;">Account ID :<span id="acc"> none</span></strong>
-            
-      </p>
+            <strong class="d-block text-gray-dark"  style="line-height: 30px;">Account ID :<span id="acc"> none</span></strong></p>
       </div>
 
       <div class="my-3 p-3 rounded box-shadow" style="background-color: rgb(203, 211, 211);">
             <table><tr>
-                  <th><p class="media-body pb-8 mb-0 small lh-125"><strong class="d-block text-gray-dark" style="line-height: 30px;"> Move to Account:</strong></p></th>
-                  <th><button type="button" class="btn btn-success" style="line-height: 20px; background:#505050; position: relative; left: 10px;" id="gta">Account</button></th></tr></table>
-            <table><tr>
                   <th><p class="media-body pb-8 mb-0 small lh-125"><strong class="d-block text-gray-dark" style="line-height: 30px;">Select Account  :</strong></p></th>      
                   <th>  <select id="drop1" name="drop1" style="color:rgb(243,243,243); background-color: #505050; border: 1px solid rgb(41, 189, 61);border-radius: 5px; position: relative; left: 20px;">
                                    <option value="nothing">--choose account--</option>
-                                   <option value="https://in1.dashboard.clevertap.com/">in1</option>
-                                   <option value="https://eu1.dashboard.clevertap.com/">eu1</option>
-                                   <option value="https://sg1.dashboard.clevertap.com/">sg1</option>
-                                   <option value="https://us1.dashboard.clevertap.com/">us1</option>
+                                   <option value="in1">in1</option>
+                                   <option value="eu1">eu1</option>
+                                   <option value="sg1">sg1</option>
+                                   <option value="us1">us1</option>
                         </select></th>
-                  </tr>
-            </table>
+                  </tr></table>
+            <table><tr>
+                  <th><p class="media-body pb-8 mb-0 small lh-125"><strong class="d-block text-gray-dark" style="line-height: 30px;"> Move to Account:</strong></p></th>
+                  <th><button type="button" class="btn btn-success" style="line-height: 20px; background:#505050; position: relative; left: 10px;" id="gta">Account</button></th></tr></table>
                         <p class="media-body pb-1 mb-0 small lh-125 border-bottom border-gray"></p>
       </div>
+      <div class="my-3 p-3 rounded box-shadow" style="background-color: rgb(203, 211, 211);">
+            <p class="media-body pb-1 mb-0 small lh-125"><strong class="d-block text-gray-dark" style="line-height: 30px;"> onUserLogin implementation:</strong>
+            <table><tr>
+            <th><button type="button" id="login" class="btn btn-success" style="line-height: 20px; background:#505050; position: relative; left: 20px;">Login</button></th>
+            <th><button type="button" id="loginagain" class="btn btn-success" style="line-height: 20px; background:#505050; position: relative; left: 50px;">Login Again</button></th>
+            <th><button type="button" id="test" class="btn btn-success" style="line-height: 20px; background:#505050; position: relative; left: 80px;">Test</button></th></tr></table>
+            <p class="media-body pb-3 mb-0 small lh-125"><strong class="d-block text-gray-dark" style="line-height: 30px;"><span id="ctid"></span></strong>
+            <strong class="d-block text-gray-dark" style="line-height: 30px;"><span id="msg"></span></strong></p>      
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"><strong class="d-block text-gray-dark" style="line-height: 20px;"><span id="userlogin"></span></strong></p>
+            </div>
 
-            <div class="my-3 p-3 rounded box-shadow" style="background-color: rgb(203, 211, 211);"><p class="media-body pb-2 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark" style="line-height: 30px;"><span id="serviceworker"> Service Worker is not present.</span></strong></p>
+            <div class="my-7 p-3 rounded box-shadow" style="background-color: rgb(203, 211, 211);">
+            <table>
+            <!-- <tr><th><p class="media-body pb-2 mb-0 small lh-125"><strong class="d-block text-gray-dark" style="line-height: 30px;">To Activate Service Worker File:</strong></p></th>
+            <th><button type="button" id="swbutton" class="btn btn-success" style="line-height: 20px; background:#505050;position: relative; left: 20px;">Activate</button></th></tr> -->
+            <tr><td><p class="media-body pb-2 mb-0 small lh-125"><strong class="d-block text-gray-dark" style="line-height: 30px;"><span id="serviceworker"> Service Worker is not present.</span></strong></p></td></tr></table>
+            <p class="media-body pb-2 mb-0 small lh-125 border-bottom border-gray"></p>
             </div>
         
-            <div class="my-3 p-3 rounded box-shadow" style="background-color: rgb(203, 211, 211);"><p class="media-body pb-3 mb-0 small lh-125">
-            <strong class="d-block text-gray-dark" style="line-height: 30px;">CTID :<span id="ctid"> none</span></strong></p>
-      
-            <button type="button" id="login" class="btn btn-success" style="line-height: 20px; background:#505050;">Login User 1</button>
-            <button type="button" id="loginagain" class="btn btn-success" style="line-height: 20px; background:#505050;">Login User 2</button>
-            <button type="button" id="test" class="btn btn-success" style="line-height: 20px; background:#505050;">Test</button>
-            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"><strong class="d-block text-gray-dark" style="line-height: 20px;"><span id="userlogin"></span></strong></p>
-            <!-- <p class="media-body pb-3 mb-0 small lh-125"><strong class="d-block text-gray-dark" style="line-height: 30px;"><span id="userlogin"></span></strong></p> -->
-            </div>
+          
             
             <p class="media-body pb-1 mb-0 small lh-125"></p>  
         
-      </main>      
-     
-      <!-- <div class="my-3 p-3 bg-white rounded box-shadow"><p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark" style="line-height: 30px;"><div class="progress" style=""><div class="progress-bar w-25"></div></div>Clevertap is found?</strong><strong class="d-block text-gray-dark" style="line-height: 30px;">Account ID is :&nbsp;</strong><div class="container" style=""></div><button type="button" class="btn btn-success" style="line-height: 30px;">Primary</button></p>
-        
-        
-        
-        
-        
-      </div><div class="my-3 p-3 bg-white rounded box-shadow"><p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark" style="line-height: 30px;"><div class="progress" style=""><div class="progress-bar w-25"></div></div>Clevertap is found?</strong><strong class="d-block text-gray-dark" style="line-height: 30px;">Account ID is :&nbsp;</strong><div class="container" style=""></div><button type="button" class="btn btn-success" style="line-height: 30px;">Primary</button></p>
-        
-        
-        
-        
-        
-      </div><div class="my-3 p-3 bg-white rounded box-shadow"><p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark" style="line-height: 30px;"><div class="progress" style=""><div class="progress-bar w-25"></div></div>Clevertap is found?</strong><strong class="d-block text-gray-dark" style="line-height: 30px;">Account ID is :&nbsp;</strong><div class="container" style=""></div><button type="button" class="btn btn-success" style="line-height: 30px;">Primary</button></p>
-        
-        
-        
-        
-        
-      </div><div class="my-3 p-3 bg-white rounded box-shadow"><p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark" style="line-height: 30px;"><div class="progress" style=""><div class="progress-bar w-25"></div></div>Clevertap is found?</strong><strong class="d-block text-gray-dark" style="line-height: 30px;">Account ID is :&nbsp;</strong><div class="container" style=""></div><button type="button" class="btn btn-success" style="line-height: 20px;">Primary</button></p>
-        
-        
-        
-        
-        
-      </div>
- -->
-
-   
+      </main>          
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
